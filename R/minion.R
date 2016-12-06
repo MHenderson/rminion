@@ -12,4 +12,5 @@ minion <- function(input) {
   close(input_file)
   cmd <- paste(minion_path, options, input = file.path(tmp, "tmp.minion"))
   out <- system(cmd, intern = TRUE)
+  parse_minion_out(out)
 }
