@@ -1,0 +1,49 @@
+---
+title: "Solving Constraint Problems with **rminion**"
+author: "Matthew Henderson"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(
+  message = FALSE,
+  echo = TRUE,
+  warning = FALSE,
+  cache = FALSE
+)
+```
+
+## Latin Squares
+
+```{r}
+library(minionator)
+
+a <- Latin$new(3)
+print(a)
+```
+
+```{r}
+library(rminion)
+
+minion(a)
+```
+
+## Enumerate Latin squares of size at most 5
+
+c.f. https://en.wikipedia.org/wiki/Latin_square
+
+```{r}
+latin_count <- function(n) minion(Latin$new(n))
+counts <- do.call("rbind", lapply(1:5, latin_count))
+knitr::kable(counts)
+```
+
+
