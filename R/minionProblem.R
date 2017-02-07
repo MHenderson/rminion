@@ -20,8 +20,11 @@ minionProblem <- R6::R6Class("MinionProblem",
      private$size = size
      private$variables = var(size)
    },
-   print_ = function(...) {
+   minion3 = function(...) {
      R.rsp::rstring(file = private$template, args = private$template_args, ...)
+   },
+   print_ = function(...) {
+     writeLines(as.character(self$minion3(...)))
    }
  ),
  private = list(
