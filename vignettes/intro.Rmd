@@ -1,5 +1,5 @@
 ---
-title: "Solving Constraint Problems with **rminion**"
+title: "Solving Constraint Problems with rminion"
 author: "Matthew Henderson"
 date: "`r Sys.Date()`"
 output:

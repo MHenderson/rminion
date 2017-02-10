@@ -3,12 +3,12 @@
 rminion
 =======
 
-Call Minion from R.
+Call [Minion](http://constraintmodelling.org/minion/) from R.
 
 Installation
 ------------
 
-You can install rminion from github with:
+You can install **rminion** from github with:
 
 ``` r
 # install.packages("devtools")
@@ -18,17 +18,10 @@ devtools::install_github("MHenderson/rminion")
 Example
 -------
 
-This is a basic example which shows you how to solve a common problem:
+The **minionator** package includes the `Latin` problem generator for Latin squares.
 
 ``` r
 library(minionator)
-#> Loading required package: rminion
-#> Loading required package: R6
-#> 
-#> Attaching package: 'minionator'
-#> The following object is masked from 'package:base':
-#> 
-#>     row
 
 a <- Latin$new(3)
 print(a)
@@ -59,6 +52,8 @@ print(a)
 #> **EOF**
 ```
 
+To solve this problem using Minion just call the `rminion::minion` function.
+
 ``` r
 library(rminion)
 
@@ -66,7 +61,7 @@ minion(a)
 #>   Parsing Time Setup Time First Node Time Initial Propagate
 #> 1            0          0               0                 0
 #>   First node time Solve Time Total Time Total System Time Total Wall Time
-#> 1               0          0          0          0.000668        0.000776
+#> 1               0          0          0          0.000616        0.003178
 #>   Maximum RSS (kB) Total Nodes Problem solvable? Solutions Found
-#> 1              968          23               yes              12
+#> 1              972          23               yes              12
 ```
