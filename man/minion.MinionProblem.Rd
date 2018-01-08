@@ -4,7 +4,7 @@
 \alias{minion.MinionProblem}
 \title{Title}
 \usage{
-\method{minion}{MinionProblem}(input)
+\method{minion}{MinionProblem}(input, options = "-findallsols -noprintsols")
 }
 \arguments{
 \item{input}{}

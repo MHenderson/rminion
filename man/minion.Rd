@@ -4,7 +4,7 @@
 \alias{minion}
 \title{Run the minion program on the input file whose path is given.}
 \usage{
-minion(x)
+minion(x, ...)
 }
 \arguments{
 \item{input_file_path}{Minion file to process}
