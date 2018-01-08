@@ -26,14 +26,16 @@ knitr::opts_chunk$set(
 ```{r}
 library(minionator)
 
-a <- Latin$new(3)
+a <- LatinSquare$new(3)
 print(a)
 ```
 
 ```{r}
 library(rminion)
 
-minion(a)
+Sys.setenv("PATH" = paste("/home/matthew/bin/minion-1.8/bin", Sys.getenv("PATH"), sep = ":"))
+
+minion(a, options = c("findallsols", "noprintsols"))
 ```
 
 ## Enumerate Latin squares of size at most 5
@@ -41,9 +43,8 @@ minion(a)
 c.f. https://en.wikipedia.org/wiki/Latin_square
 
 ```{r}
-latin_count <- function(n) minion(Latin$new(n))
-counts <- do.call("rbind", lapply(1:5, latin_count))
+latin_count <- function(n) minion(LatinSquare$new(n), options = c("findallsols", "noprintsols"))
+
+counts <- purrr::map_df(1:5, latin_count)
 knitr::kable(counts)
 ```
-
-

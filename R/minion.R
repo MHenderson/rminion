@@ -3,7 +3,7 @@
 #' @param input_file_path Minion file to process
 #'
 #' @export
-minion <- function(x) UseMethod("minion")
+minion <- function(x, ...) UseMethod("minion")
 
 #' Title
 #'
@@ -13,15 +13,14 @@ minion <- function(x) UseMethod("minion")
 #' @export
 #'
 #' @examples
-minion.MinionProblem <- function(input) {
-  minion_path <- "/home/matthew/bin/minion-1.8/bin/minion"
-  options <- "-findallsols -noprintsols"
+minion.MinionProblem <- function(input, options = c("findallsols", "noprintsols")) {
+  option_string <- paste0(c("-"), options, collapse = " ")
   tmp <- tempdir()
   input_file_path <- file.path(tmp, "tmp.minion")
   input_file <- file(input_file_path)
   writeLines(input$minion3(), input_file)
   close(input_file)
-  cmd <- paste(minion_path, options, input = input_file_path)
+  cmd <- paste("minion", option_string, input = input_file_path)
   out <- system(cmd, intern = TRUE)
-  parse_minion_out(out)
+  mopr::parseMinionOut(out, options)
 }

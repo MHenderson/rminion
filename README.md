@@ -61,7 +61,7 @@ minion(a)
 #>   Parsing Time Setup Time First Node Time Initial Propagate
 #> 1            0          0               0                 0
 #>   First node time Solve Time Total Time Total System Time Total Wall Time
-#> 1               0          0          0          0.000616        0.003178
+#> 1               0          0          0          0.001031        0.006412
 #>   Maximum RSS (kB) Total Nodes Problem solvable? Solutions Found
-#> 1              972          23               yes              12
+#> 1              948          23               yes              12
 ```
