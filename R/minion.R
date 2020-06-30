@@ -11,6 +11,8 @@ minion <- function(...) {
                           stderr_to_stdout = TRUE,
                           echo_cmd = FALSE)
 
-  unlist(strsplit(result$stdout, "\n"))
+  #unlist(strsplit(result$stdout, "\n"))
+
+  result
 
 }
