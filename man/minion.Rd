@@ -2,7 +2,7 @@
 % Please edit documentation in R/minion.R
 \name{minion}
 \alias{minion}
-\title{Execute minion}
+\title{Call Minion}
 \usage{
 minion(...)
 }
@@ -10,5 +10,5 @@ minion(...)
 \item{...}{Character vector of command flags.}
 }
 \description{
-Execute minion
+Call Minion
 }
