@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse  = TRUE,
+  comment   = "#>",
+  fig.path  = "man/figures/README-",
+  out.width = "100%"
+)
+
+Sys.setenv(MINION_PATH = "/home/matthew/bin/minion-1.8")
+```
+
+# rminion
+
+A simple wrapper around the
+[Minion](https://github.com/minion/minion)
+constraint solver.
+
+## Installation
+
+### Minion
+
+To install Minion, download the Minion repository. The
+Minion executable is found in the `bin/` folder.
+
+### R Package
+
+```{r eval = FALSE}
+remotes::install_github("MHenderson/rminion")
+```
+
+## Run
+
+Assuming that the Minion repository has been downloaded
+and that an environment variable `MINION_PATH` has been
+defined which points to the location of the Minion repository,
+then we can run one of the benchmark examples like so.
+
+```{r eval = TRUE}
+library(rminion)
+
+dgr_path <- file.path(Sys.getenv("MINION_PATH"), "benchmarks/small/donaldgeraldrobert.minion")
+
+minion(dgr_path)
+```
