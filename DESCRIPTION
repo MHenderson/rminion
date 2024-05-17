@@ -1,6 +1,6 @@
 Package: rminion
-Title: Use the Minion constraint solver
-Version: 0.1.0.9000
+Title: Use the Minion Constraint Solver from R
+Version: 0.2.0
 Authors@R: 
     person(given = "Matthew",
            family = "Henderson",
@@ -13,8 +13,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
-Suggests: 
-    testthat
+RoxygenNote: 7.3.1
 Imports: 
     processx

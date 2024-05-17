@@ -25,3 +25,6 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 inst/doc
+rminion.Rcheck/
+rminion*.tar.gz
+rminion*.tgz

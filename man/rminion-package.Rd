@@ -4,10 +4,9 @@
 \name{rminion-package}
 \alias{rminion}
 \alias{rminion-package}
-\title{rminion: Use the Minion constraint solver}
+\title{rminion: Use the Minion Constraint Solver from R}
 \description{
-Use the Minion constraint solver to solve
-  constraint satisfaction problems.
+Use the Minion constraint solver to solve constraint satisfaction problems.
 }
 \author{
 \strong{Maintainer}: Matthew Henderson \email{matthew.james.henderson@gmail.com} (\href{https://orcid.org/0000-0001-7949-8208}{ORCID})
