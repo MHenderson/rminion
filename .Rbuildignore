@@ -4,3 +4,6 @@
 ^README-.*\.png$
 ^rminion\.Rproj$
 ^LICENSE\.md$
+^rminion\.Rcheck$
+^rminion.*\.tar\.gz$
+^rminion.*\.tgz$
